@@ -1,15 +1,19 @@
-# Kubernetes The Hard Way
+> This tutorial is a modified version of the original developed by [Kelsey Hightower](https://github.com/kelseyhightower/kubernetes-the-hard-way).
 
-This tutorial walks you through setting up Kubernetes the hard way. This guide is not for people looking for a fully automated command to bring up a Kubernetes cluster. If that's you then check out [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine), or the [Getting Started Guides](https://kubernetes.io/docs/setup).
+# Kubernetes The Hard Way On VirtualBox
+
+This tutorial walks you through setting up Kubernetes the hard way on a local machine using VirtualBox.
+This guide is not for people looking for a fully automated command to bring up a Kubernetes cluster.
+If that's you then check out [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine), or the [Getting Started Guides](http://kubernetes.io/docs/getting-started-guides/).
 
 Kubernetes The Hard Way is optimized for learning, which means taking the long route to ensure you understand each task required to bootstrap a Kubernetes cluster.
 
+This tutorial is a modified version of the original developed by [Kelsey Hightower](https://github.com/kelseyhightower/kubernetes-the-hard-way).
+While the original one uses GCP as the platform to deploy kubernetes,  we use VirtualBox and Vagrant to deploy a cluster on a local machine. If you prefer the cloud version, refer to the original one [here](https://github.com/kelseyhightower/kubernetes-the-hard-way)
+
+Another difference is that we use Docker instead of containerd. There are a few other differences to the original and they are documented [here](docs/differences-to-original.md)
+
 > The results of this tutorial should not be viewed as production ready, and may receive limited support from the community, but don't let that stop you from learning!
-
-## Copyright
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-
 
 ## Target Audience
 
@@ -19,15 +23,13 @@ The target audience for this tutorial is someone planning to support a productio
 
 Kubernetes The Hard Way guides you through bootstrapping a highly available Kubernetes cluster with end-to-end encryption between components and RBAC authentication.
 
-* [kubernetes](https://github.com/kubernetes/kubernetes) v1.21.0
+* [kubernetes](https://github.com/kubernetes/kubernetes) v1.23.6
 * [containerd](https://github.com/containerd/containerd) v1.4.4
 * [coredns](https://github.com/coredns/coredns) v1.8.3
 * [cni](https://github.com/containernetworking/cni) v0.9.1
-* [etcd](https://github.com/etcd-io/etcd) v3.4.15
+* [etcd](https://github.com/etcd-io/etcd) v3.5.4
 
 ## Labs
-
-This tutorial assumes you have access to the [Google Cloud Platform](https://cloud.google.com). While GCP is used for basic infrastructure requirements the lessons learned in this tutorial can be applied to other platforms.
 
 * [Prerequisites](docs/01-prerequisites.md)
 * [Installing the Client Tools](docs/02-client-tools.md)
